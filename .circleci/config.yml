@@ -73,4 +73,4 @@ workflows:
       - install
       - test: { requires: [install] }
       - audit: { requires: [install] }
-      - audit: { requires: [test, audit] }
+      - build: { requires: [test, audit] }
