@@ -8,6 +8,7 @@ defaults: &defaults
 
 orbs:
   node: circleci/node@1.1.3
+  slack: circleci/slack@3.2.0
 
 jobs:
   install:
@@ -55,6 +56,11 @@ jobs:
           root: .
           paths:
             - .
+  notice_status:
+    <<: *defaults
+    steps:
+      - slack/status
+
 
 workflows:
   version: 2
@@ -74,3 +80,4 @@ workflows:
       - test: { requires: [install] }
       - audit: { requires: [install] }
       - build: { requires: [test, audit] }
+      - notice_status: { requires: [build] }
