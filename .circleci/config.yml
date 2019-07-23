@@ -43,6 +43,8 @@ jobs:
       - run:
           name: Audit
           command: yarn audit
+      - slack/status:
+          fail_only: true
 
   build:
     <<: *defaults
@@ -56,8 +58,8 @@ jobs:
           root: .
           paths:
             - .
-  notice_status:
-    <<: *defaults
+  notify-status:
+    executor: slack/alpine
     steps:
       - slack/status
 
@@ -80,4 +82,4 @@ workflows:
       - test: { requires: [install] }
       - audit: { requires: [install] }
       - build: { requires: [test, audit] }
-      - notice_status: { requires: [build] }
+      - notify-status: { requires: [build] }
