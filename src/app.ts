@@ -1,5 +1,10 @@
-export function add(x: number, y: number): number {
-  return x + y;
+process.on("unhandledRejection", reason => {
+  console.error(reason);
+  process.exit(1);
+});
+
+async function main(): Promise<void> {
+  console.log("poyo");
 }
 
-console.log("poyo");
+main();
