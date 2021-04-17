@@ -26,7 +26,7 @@ jobs:
 
     - name: yarn install
       run: |
-        yarn install --frozen-lockfile
+        yarn install --frozen-lockfile --verbose
       env:
         CI: true
 
@@ -65,7 +65,7 @@ jobs:
 
     - name: yarn install
       run: |
-        yarn install --frozen-lockfile
+        yarn install --frozen-lockfile --verbose
       env:
         CI: true
 
@@ -100,7 +100,7 @@ jobs:
 
     - name: yarn install
       run: |
-        yarn install --frozen-lockfile
+        yarn install --frozen-lockfile --verbose
       env:
         CI: true
     - name: Run test
