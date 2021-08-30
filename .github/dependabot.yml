@@ -8,7 +8,5 @@ updates:
       time: "17:00"
       timezone: Japan
     open-pull-requests-limit: 10
-    ignore:
-      - dependency-name: y18n
-        versions:
-          - 4.0.1
+    allow:
+      - dependency-type: "all"
