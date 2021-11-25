@@ -1,14 +1,9 @@
 {
+  "extends": "@tsconfig/node16/tsconfig.json",
   "compilerOptions": {
-    "target": "es2018",
-    "module": "commonjs",
-    "strict": true,
-    "esModuleInterop": true,
-    "moduleResolution": "node",
     "outDir": "dist",
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "skipLibCheck": true
+    "emitDecoratorMetadata": true
   },
   "include": ["./src/**/*.ts"],
   "exclude": ["./src/**/*.spec.ts"]
