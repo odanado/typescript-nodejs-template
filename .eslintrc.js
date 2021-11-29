@@ -15,5 +15,7 @@ module.exports = {
   parserOptions: {
     sourceType: "module",
   },
-  rules: {},
+  rules: {
+    "jest/require-hook": "off",
+  },
 };
