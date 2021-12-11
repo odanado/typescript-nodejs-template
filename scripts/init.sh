@@ -2,7 +2,10 @@
 
 set -eu
 
-.github/dependabot.yml
-
+rm .github/dependabot.yml
 rm -rf .git
+
+yarn install
+
 git init
+git commit -m "init"
