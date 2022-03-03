@@ -1200,6 +1200,11 @@
   resolved "https://registry.yarnpkg.com/@tsconfig/node14/-/node14-1.0.0.tgz#5bd046e508b1ee90bc091766758838741fdefd6e"
   integrity sha512-RKkL8eTdPv6t5EHgFKIVQgsDapugbuOptNd9OOunN/HAkzmmTnZELx1kNCK0rSdUYGmiFMM3rRQMAWiyp023LQ==
 
+"@tsconfig/node16-strictest-esm@^1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@tsconfig/node16-strictest-esm/-/node16-strictest-esm-1.0.0.tgz#dc0cb851100d9e1b4952da0c1d67664390c5147e"
+  integrity sha512-B/R4m4fy4ZKvAjwpDW3BdfNHYhRltMPpUdZTI0RpKSTU6HzA7Ub3XskVmbFG45JaOcjuTqXzO7o4rDG0LfUYzQ==
+
 "@tsconfig/node16@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@tsconfig/node16/-/node16-1.0.2.tgz#423c77877d0569db20e1fc80885ac4118314010e"
