@@ -3,6 +3,7 @@
   "private": true,
   "main": "index.js",
   "license": "MIT",
+  "packageManager": "pnpm@7.16.0",
   "devDependencies": {
     "@tsconfig/node16": "^1.0.2",
     "@types/jest": "^27.0.3",
@@ -24,10 +25,10 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "test": "run-p test:*",
-    "test:build": "yarn build --noEmit",
-    "test:jest": "yarn jest --detectOpenHandles --forceExit",
+    "test:build": "pnpm build --noEmit",
+    "test:jest": "jest --detectOpenHandles --forceExit",
     "test:lint": "eslint --ext .js,.ts --ignore-path .gitignore .",
-    "test:format": "prettier --ignore-path .gitignore . --check",
-    "format": "prettier --ignore-path .gitignore . --write"
+    "test:format": "prettier --ignore-path .prettierignore . --check",
+    "format": "prettier --ignore-path .prettierignore . --write"
   }
 }

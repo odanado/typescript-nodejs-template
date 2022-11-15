@@ -15,12 +15,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - uses: nodenv/actions/node-version@main
-        id: nodenv
-      - name: Use Node.js ${{ steps.nodenv.outputs.node-version }}
-        uses: actions/setup-node@v2
+      - name: Install Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: ${{ steps.nodenv.outputs.node-version }}
+          node-version-file: ./.node-version
 
       - name: cache node_modules
         id: node_modules_cache_id
@@ -28,16 +26,16 @@ jobs:
         with:
           path: |
             node_modules
-          key: node-v${{ matrix.node-version }}-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
+          key: node-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
 
       - name: yarn install
         run: |
-          yarn install --frozen-lockfile --verbose
+          pnpm install --frozen-lockfile
         env:
           CI: true
 
       - name: Run test
         run: |
-          yarn test
+          pnpm test
         env:
           CI: true
