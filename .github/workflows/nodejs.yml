@@ -28,8 +28,7 @@ jobs:
             node_modules
           key: node-deps-${{ hashFiles(format('{0}{1}', github.workspace, '/yarn.lock')) }}
 
-      - name: Enable pnpm
-        run: corepack enable pnpm
+      - run: corepack enable
 
       - name: pnpm install
         run: |
