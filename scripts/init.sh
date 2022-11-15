@@ -6,7 +6,7 @@ rm .github/dependabot.yml
 rm .github/mergify.yml
 rm -rf .git
 
-yarn install
+pnpm install
 
 git init
 git commit -m "init"
