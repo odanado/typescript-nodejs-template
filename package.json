@@ -4,9 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "type": "module",
-  "packageManager": "pnpm@7.16.0",
+  "packageManager": "npm@9.3.1",
   "devDependencies": {
-    "@tsconfig/node16-strictest-esm": "^1.0.3",
     "@types/node": "^18.11.9",
     "@typescript-eslint/eslint-plugin": "^5.42.1",
     "@typescript-eslint/parser": "^5.42.1",
@@ -22,10 +21,15 @@
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
     "test": "run-p test:*",
-    "test:build": "pnpm build --noEmit",
+    "test:build": "npm run build -- --noEmit",
     "test:vitest": "vitest run",
     "test:lint": "eslint --ext .js,.ts --ignore-path .gitignore .",
     "test:format": "prettier --ignore-path .prettierignore . --check",
-    "format": "prettier --ignore-path .prettierignore . --write"
+    "format": "prettier --ignore-path .prettierignore . --write",
+    "start": "node --loader ts-node/esm src/app.ts",
+    "watch": "node --loader ts-node/esm --watch src/app.ts"
+  },
+  "dependencies": {
+    "@tsconfig/node18": "^1.0.1"
   }
 }
