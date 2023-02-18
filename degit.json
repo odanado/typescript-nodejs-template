@@ -1,0 +1,10 @@
+[
+  {
+    "action": "remove",
+    "files": [
+      ".github/dependabot.yml",
+      ".github/mergify.yml",
+      ".github/workflows/codeql-analysis.yml"
+    ]
+  }
+]
