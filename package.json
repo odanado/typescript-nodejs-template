@@ -25,7 +25,9 @@
     "test:vitest": "vitest run",
     "test:lint": "eslint --ext .js,.ts --ignore-path .gitignore .",
     "test:format": "prettier --ignore-path .prettierignore . --check",
-    "format": "prettier --ignore-path .prettierignore . --write"
+    "format": "prettier --ignore-path .prettierignore . --write",
+    "start": "node --loader ts-node/esm src/app.ts",
+    "watch": "node --loader ts-node/esm --watch src/app.ts"
   },
   "dependencies": {
     "@tsconfig/node18": "^1.0.1"
