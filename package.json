@@ -6,7 +6,7 @@
   "type": "module",
   "packageManager": "npm@9.3.1",
   "devDependencies": {
-    "@types/node": "^18.15.0",
+    "@types/node": "^18.15.3",
     "@typescript-eslint/eslint-plugin": "^5.54.1",
     "@typescript-eslint/parser": "^5.54.1",
     "esbuild": "^0.17.11",
