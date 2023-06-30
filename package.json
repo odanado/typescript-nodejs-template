@@ -30,6 +30,6 @@
     "watch": "node --loader ts-node/esm --watch src/app.ts"
   },
   "dependencies": {
-    "@tsconfig/node18": "^2.0.1"
+    "@tsconfig/node18": "^18.2.0"
   }
 }
