@@ -1,4 +1,4 @@
-async function main(): Promise<void> {
+function main(): void {
   console.log("poyo");
 }
 
