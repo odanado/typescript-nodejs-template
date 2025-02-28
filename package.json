@@ -6,6 +6,7 @@
   "type": "module",
   "packageManager": "npm@9.3.1",
   "devDependencies": {
+    "@tsconfig/node22": "^22.0.0",
     "@types/node": "^22.13.5",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
@@ -26,8 +27,5 @@
     "format": "prettier --ignore-path .prettierignore . --write",
     "start": "node --experimental-strip-types src/app.ts",
     "watch": "node --experimental-strip-types --watch src/app.ts"
-  },
-  "dependencies": {
-    "@tsconfig/node18": "^18.2.4"
   }
 }
