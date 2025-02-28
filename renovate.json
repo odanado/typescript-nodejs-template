@@ -4,6 +4,7 @@
   "extends": ["config:best-practices"],
   "lockFileMaintenance": {
     "enabled": true,
-    "automerge": true
+    "automerge": true,
+    "platformAutomerge": true
   }
 }
