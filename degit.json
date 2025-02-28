@@ -4,7 +4,8 @@
     "files": [
       ".github/dependabot.yml",
       ".github/mergify.yml",
-      ".github/workflows/codeql-analysis.yml"
+      ".github/workflows/codeql-analysis.yml",
+      "README.md"
     ]
   }
 ]
