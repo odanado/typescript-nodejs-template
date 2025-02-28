@@ -6,15 +6,15 @@
   "type": "module",
   "packageManager": "npm@9.3.1",
   "devDependencies": {
+    "@eslint/js": "^9.21.0",
     "@tsconfig/node22": "^22.0.0",
     "@types/node": "^22.13.5",
-    "@typescript-eslint/eslint-plugin": "^5.62.0",
-    "@typescript-eslint/parser": "^5.62.0",
-    "eslint": "^8.57.0",
+    "eslint": "^9.21.0",
     "eslint-config-prettier": "^10.0.2",
     "npm-run-all": "^4.1.5",
     "prettier": "^3.5.2",
     "typescript": "^5.7.3",
+    "typescript-eslint": "^8.25.0",
     "vitest": "^3.0.7"
   },
   "scripts": {
@@ -22,7 +22,7 @@
     "test": "run-p test:*",
     "test:build": "npm run build -- --noEmit",
     "test:vitest": "vitest run",
-    "test:lint": "eslint --ext .js,.ts --ignore-path .gitignore .",
+    "test:lint": "eslint .",
     "test:format": "prettier --ignore-path .prettierignore . --check",
     "format": "prettier --ignore-path .prettierignore . --write",
     "start": "node --experimental-strip-types src/app.ts",
