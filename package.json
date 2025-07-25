@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "type": "module",
-  "packageManager": "npm@11.4.2",
+  "packageManager": "npm@11.5.1",
   "devDependencies": {
     "@eslint/js": "9.31.0",
     "@tsconfig/node22": "22.0.2",
